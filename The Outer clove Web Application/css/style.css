@@ -1,0 +1,364 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/img11.jpg);
+}
+.container {
+    height: 100px;
+}
+
+.navigation {
+    
+ /* Change the background color as needed */
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    transition: 0.3s;
+    margin-top: 100px;
+    position: fixed;
+    z-index: 3;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    padding: 15px;
+    background-color: black;
+ /* Change the border color as needed */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-style: bold;
+}
+
+h2{
+    color: white;
+}
+.navigation span.icon {
+    margin-right: 10px;
+}
+
+.navigation li:hover {
+    background-color: rgb(71, 69, 69);
+ /* Change the hover background color as needed */
+}
+.navigation a:hover{
+    color: white;
+}
+
+.header {
+    color: white;
+    text-align: center;
+    padding: 0 25px;
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+background-color: rgba(0, 0, 0, 0.4);
+border-radius: 5px;
+height: 5.5rem;
+margin: 0.4rem;
+transition: all 0.3s ease-in-out;
+box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.toggle-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    padding-right: 50px;
+}
+
+.toggle-button:hover {
+    background-color: transparent;
+}
+.navigation {
+    border-radius: 5px;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    transition: 0.3s;
+    display: none; /* Initially hide the sidebar */
+}
+
+.navigation.show {
+    display: block; /* Display the sidebar when the "show" class is present */
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* ... (Your existing styles for navigation) ... */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .navigation {
+        width: 40%;
+        height: 100%;
+        position: fixed;
+        top: 10px;
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    .navigation.show {
+        left: 0;
+    }
+}
+.add_container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    height: 80vh;
+}
+/* ... (Your existing styles for navigation) ... */
+
+.add_container .content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Style for the "Add New" button */
+.add_container .content button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.add_container .content button:hover {
+    background-color: rgb(184, 89, 89);
+}
+
+/* Style for the form */
+.add_container .content #addForm {
+    display: none;
+}
+
+.add_container .content #addForm form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.add_container .content #addForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* styles.css */
+
+/* styles.css */
+
+.scrollable-table {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.scrollable-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.scrollable-table th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+.scrollable-table th {
+    background-color: #f2f2f2;
+}
+
+.scrollable-table td{
+    color: white;
+}
+.scrollable-table tr:hover {
+    background-color: black;
+}
+
+.scrollable-table button {
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.scrollable-table button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+    .scrollable-table table {
+        font-size: 14px;
+    }
+
+    .scrollable-table th, td {
+        padding: 8px;
+    }
+
+    .scrollable-table button {
+        padding: 6px 10px;
+    }
+}
+.messages-container{
+    width: 400px;
+    display: flexbox;
+    margin-top: 100px;
+    margin-left: 40%;
+    position: absolute;
+    align-items: center;
+    z-index: 4;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(243, 66, 63);
+}
+
+.edit_container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #3f3b3b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.edit_container .content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.edit_container .content h2 {
+    color: black;
+}
+
+.edit_container .content form {
+    margin-top: 20px;
+}
+
+.edit_container .content label {
+    display: block;
+    margin-bottom: 8px;
+    color: black;
+}
+
+.edit_container .content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.edit_container .content input[type="submit"] {
+    background-color: #4caf50;
+    color: red;
+    cursor: pointer;
+}
+
+.edit_container .content input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.add-product-container {
+    display: none;
+
+}
+.add_container #addForm{
+    color: white;
+}
+.btn .btn_secondary{
+    background-color: #45a049;
+    color: #333
+}
+
+#searchInput {
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: white;
+    background-color: #333;
+    margin-bottom: 10px;
+    width: 250px;
+    font-size: 16px;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.row .card {
+    background-color: rgb(47, 44, 44);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+.row .icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.row .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.row h5 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: white;
+}
